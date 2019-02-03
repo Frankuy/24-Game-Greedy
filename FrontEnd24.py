@@ -17,21 +17,21 @@ card_width = 100
 card_height = 150
 #graphic
 font = pygame.font.SysFont("raleway", 25, True)
-card = pygame.image.load("card.png")
-bg = pygame.image.load("table.jpg")
-bgStart = pygame.image.load("bgStart.jpg")
+card = pygame.image.load(os.path.join("img","card.png"))
+bg = pygame.image.load(os.path.join("img","table.jpg"))
+bgStart = pygame.image.load(os.path.join("img","bgStart.jpg"))
 hati = []
 for i in range(13):
-	hati.append(pygame.image.load(os.path.join("Hati",str(i+1) + "H.png")))
+	hati.append(pygame.image.load(os.path.join("img/Hati",str(i+1) + "H.png")))
 keriting = []
 for i in range(13):
-	keriting.append(pygame.image.load(os.path.join("Keriting", str(i+1) + "K.png")))
+	keriting.append(pygame.image.load(os.path.join("img/Keriting", str(i+1) + "K.png")))
 sekop = []
 for i in range(13):
-	sekop.append(pygame.image.load(os.path.join("Sekop", str(i+1) + "S.png")))
+	sekop.append(pygame.image.load(os.path.join("img/Sekop", str(i+1) + "S.png")))
 wajik = []
 for i in range(13):
-	wajik.append(pygame.image.load(os.path.join("Wajik", str(i+1) + "W.png")))
+	wajik.append(pygame.image.load(os.path.join("img/Wajik", str(i+1) + "W.png")))
 
 
 #SETTING SURFACE
