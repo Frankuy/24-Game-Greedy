@@ -42,5 +42,11 @@ for a in range(1,len(angka)):
 			temp.insert(0,'(')
 			temp.append(')')
 
-print ''.join(temp)
-print eval(''.join(temp))
+result = ''.join(temp)
+if('*' not in result and '/' not in result): #bersihin kurung yang ternyata ga guna
+	result = result.replace('(','')
+	result = result.replace(')','')
+	#ga nangani semua kasus, tapi lumayan lah
+
+print result
+print eval(result)
