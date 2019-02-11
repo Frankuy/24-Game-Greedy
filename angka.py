@@ -1,8 +1,8 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 # angka = ['10','8','7','5']
 op = ['+','-','*','/']
-
+ops = []
 # temp = angka[0]
 
 # for i in range(1,len(angka)):
@@ -22,8 +22,10 @@ op = ['+','-','*','/']
 # print eval(temp)
 
 
-sauce = raw_input("what's it m'lord ")
+sauce = input("what's it m'lord ")
 angka = sauce.split(' ')
+angka.sort()
+angka = angka[::-1]
 #baru
 
 temp = [angka[0]]
@@ -36,6 +38,7 @@ for a in range(1,len(angka)):
 
 	temp.append(minim)
 	temp.append(angka[a])
+	ops.append(minim)
 
 	if(minim == '+' or minim == '-'):
 		if(a < 3):
@@ -43,10 +46,14 @@ for a in range(1,len(angka)):
 			temp.append(')')
 
 result = ''.join(temp)
-if('*' not in result and '/' not in result): #bersihin kurung yang ternyata ga guna
-	result = result.replace('(','')
-	result = result.replace(')','')
-	#ga nangani semua kasus, tapi lumayan lah
+# if(('*' not in result and '/' not in result) or (temp[1] != )): #bersihin kurung yang ternyata ga guna
+# 	result = result.replace('(','')
+# 	result = result.replace(')','')
+# 	#ga nangani semua kasus, tapi lumayan lah
 
-print result
-print eval(result)
+if((ops[1] != '*' and ops[1] != '/') and (ops[2] != '*' and ops[2] != '/')):
+	result = result.replace('(', '')
+	result = result.replace(')', '')
+
+print(result)
+print(eval(result))
