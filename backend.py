@@ -26,7 +26,10 @@ def solving(numbers):
                 op_temp = '/'
             result.append(op_temp)
             result.append(n)
-            r_temp = eval(''.join(result))
+            if (op_temp == '+'): r_temp += int(n)
+            elif (op_temp == '*'): r_temp *= int(n)
+            elif (op_temp == '-'): r_temp -= int(n)
+            elif (op_temp == '/'): r_temp /= int(n)
             op_counter -= 1
 
     if (result[5] == '*' or result[5] == '/') and (result[3] == '+' or result[3] == '-'):
