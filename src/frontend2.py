@@ -9,9 +9,9 @@ numbers = []
 print("Check the answer in output.txt")
 
 for line in input_file:
-    numbers = line.split(' ')
-    result = backend.solving(numbers)
-    output_file.write(str(result) + "\n")
+    numbers = line.strip().split(' ')
+    expression = backend.solving(numbers)
+    output_file.write(str(expression) + "\n")
 
 input_file.close
 output_file.close
