@@ -128,7 +128,6 @@ def animateDrawCard(Deck, final_location):
 			Deck.deck[n].setLocation(Deck.deck[n].getLocationX(), Deck.deck[n].getLocationY()-10)
 
 		if (Deck.deck[n].getLocation()==final_location[n]):
-			# print("{} {}".format(n,Deck.getCardNumber(n)))
 			n-=1
 		else:
 			same = False
@@ -219,7 +218,7 @@ def gameLoop():
 		if (len(choosenCard) == 4):
 			number = []
 			for i in choosenCard:
-				number.append(deck.getCardNumber(i))
+				number.append(str(deck.getCardNumber(i)))
 
 			for i in choosenCard:
 				deck.throwCard(i)
